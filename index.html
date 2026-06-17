@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Mark JS-enabled early so scroll-reveal hidden states only apply with JS (content stays visible if JS fails).
+       Safety net: if script.js never initialises reveals within 4s, force everything visible. -->
+  <script>
+    document.documentElement.classList.add('js');
+    window.__revealReady = false;
+    setTimeout(function () {
+      if (!window.__revealReady) document.documentElement.classList.add('no-reveal');
+    }, 4000);
+  </script>
+  <title>DJ NIHAN — Press Kit</title>
+  <meta name="description" content="Official press kit for DJ Nihan — open-format DJ from Nepal. Hardstyle, Techno, Tech House, Bollywood remixes. Bookings, streaming and live highlights." />
+
+  <!-- Open Graph (link-preview image; currently the hero portrait) -->
+  <meta property="og:title" content="DJ NIHAN — Press Kit" />
+  <meta property="og:description" content="Open-format DJ from Nepal. Hardstyle · Techno · Tech House · Bollywood remixes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/photos/photo-01.jpg" />
+
+  <!-- Fonts: Anton (wordmark), Rajdhani (headings), Barlow Condensed (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Themed preloader: covers the viewport on load, fades out on window 'load' (JS) -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <img class="preloader-logo" src="images/nihan-logo.png" alt="" width="1998" height="1099" />
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- Ambient film grain + scanline texture (decorative, fixed, never intercepts input) -->
+  <div class="fx-overlay" aria-hidden="true"></div>
+
+  <!-- Fixed nav -->
+  <header class="site-nav" id="top">
+    <a class="nav-brand" href="#top" aria-label="DJ Nihan — back to top">
+      <img class="nav-logo" src="images/nihan-logo.png" alt="" width="1998" height="1099" />
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#specialties">Specialties</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#stream">Listen</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#press-assets">Press</a></li>
+        <li><a class="nav-cta" href="#contact">Book Nihan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-wordmark">
+      <!-- Far background: same portrait, heavily blurred + darkened for depth only -->
+      <div class="hero-bg" aria-hidden="true">
+        <img src="images/photos/photo-01.jpg" alt="" width="1066" height="1600" loading="eager" />
+      </div>
+
+      <!-- Decorative red glass shards (animated / cursor-reactive) -->
+      <div class="shards" aria-hidden="true">
+        <span class="shard s1"></span>
+        <span class="shard s2"></span>
+        <span class="shard s3"></span>
+        <span class="shard s4"></span>
+        <span class="shard s5"></span>
+      </div>
+
+      <!-- Editorial split: copy on the left, floating cutout on the right (no overlap) -->
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Press Kit &middot; Open Format DJ &middot; Nepal</p>
+          <!-- Official NIHAN wordmark logo, glitch-reveal on load -->
+          <h1 id="hero-wordmark" class="wordmark-logo">
+            <img class="logo-img" src="images/nihan-logo.png" alt="NIHAN" width="1998" height="1099" />
+          </h1>
+          <p class="hero-sub">Hardstyle &middot; Techno &middot; Tech House &middot; Bollywood Remixes</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Book Nihan</a>
+            <a class="btn btn-ghost" href="#stream">Listen now</a>
+          </div>
+        </div>
+
+        <!-- Floating cutout: offset to the right, breathing, with a pulsing red aura behind -->
+        <figure class="hero-cutout" aria-hidden="true">
+          <img src="images/photos/nihan-hero-cutout.png" alt="" width="1200" height="1500" loading="eager"
+               onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/photos/photo-01.jpg';}" />
+        </figure>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about section">
+        <span>Scroll</span>
+        <span class="scroll-arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section reveal" aria-labelledby="about-h">
+      <p class="section-index">01</p>
+      <h2 id="about-h" class="section-title">About <span class="accent">DJ Nihan</span></h2>
+      <div class="about-body">
+        <p>Dynamic DJ from <strong class="hl">Nepal</strong>, known for electrifying performances and versatile music selection. A career spanning <strong class="hl">since 2016</strong> has established him as a prominent figure in the Nepali music scene.</p>
+        <p>He captivates audiences with his unique blend of <strong class="hl">open-format DJing</strong> &mdash; reading the room, bridging genres and keeping the floor moving from first drop to last.</p>
+      </div>
+    </section>
+
+    <!-- ============ SPECIALTIES ============ -->
+    <section id="specialties" class="section reveal" aria-labelledby="spec-h">
+      <p class="section-index">02</p>
+      <h2 id="spec-h" class="section-title">Specialties</h2>
+      <p class="section-lead">His expertise spans various genres, showcasing versatility and adaptability behind the decks.</p>
+      <ul class="genre-list">
+        <li class="genre">Hardstyle</li>
+        <li class="genre">Tech House</li>
+        <li class="genre">Techno</li>
+        <li class="genre">Commercial Hits</li>
+        <li class="genre">Bollywood Remixes</li>
+      </ul>
+    </section>
+
+    <!-- ============ CAREER HIGHLIGHTS ============ -->
+    <section id="highlights" class="section reveal" aria-labelledby="high-h">
+      <p class="section-index">03</p>
+      <h2 id="high-h" class="section-title">Career Highlights</h2>
+      <div class="about-body">
+        <p>Resident DJ at prestigious venues like <strong class="hl">Dusit Princess</strong> and the <strong class="hl">Marriott Hotel</strong>. Notably the <strong class="hl">only pioneer DJ instructor in Nepal</strong>, sharing his expertise with aspiring DJs.</p>
+      </div>
+      <p class="venue-label">Selected performances</p>
+      <ul class="venue-list">
+        <li><span class="hl">Ibiza Pool</span> &mdash; Thailand</li>
+        <li><span class="hl">Gravity</span> &mdash; India</li>
+        <li><span class="hl">Error</span> &mdash; India</li>
+        <li><span class="hl">Senate Club</span></li>
+        <li><span class="hl">Club Nexus</span></li>
+        <li><span class="hl">Club Platinum</span></li>
+        <li><span class="hl">Club 10X</span></li>
+        <li><span class="hl">Catwalk</span></li>
+        <li><span class="hl">Club 16</span></li>
+        <li><span class="hl">Hotel Yak &amp; Yeti</span></li>
+        <li><span class="hl">Hotel Annapurna</span></li>
+        <li><span class="hl">Hyatt Palace</span></li>
+      </ul>
+      <p class="venue-more">&hellip; and many more.</p>
+    </section>
+
+    <!-- ============ STREAM / LISTEN ============ -->
+    <section id="stream" class="section reveal stream" aria-labelledby="stream-h">
+      <p class="section-index">04</p>
+      <h2 id="stream-h" class="section-title">Stream <span class="accent">Now</span></h2>
+      <p class="section-lead">Hear the sound &mdash; live on every major platform.</p>
+      <ul class="stream-list stagger">
+        <li style="--i:0">
+          <a class="stream-link" href="https://open.spotify.com/artist/3gf5t5T4v5jYRSb1uMQEop?si=b8hoO0pjSrKoRZRAddfmdQ" target="_blank" rel="noopener" aria-label="Listen on Spotify">
+            <span class="stream-icon">
+              <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" aria-hidden="true" focusable="false"><path d="M128 0C57.308 0 0 57.309 0 128c0 70.696 57.309 128 128 128 70.697 0 128-57.304 128-128C256 57.314 198.697.007 127.998.007l.001-.006Zm58.699 184.614c-2.293 3.76-7.215 4.952-10.975 2.644-30.053-18.357-67.885-22.515-112.44-12.335a7.981 7.981 0 0 1-9.552-6.007 7.968 7.968 0 0 1 6-9.553c48.76-11.14 90.583-6.344 124.323 14.276 3.76 2.308 4.952 7.215 2.644 10.975Zm15.667-34.853c-2.89 4.695-9.034 6.178-13.726 3.289-34.406-21.148-86.853-27.273-127.548-14.92-5.278 1.594-10.852-1.38-12.454-6.649-1.59-5.278 1.386-10.842 6.655-12.446 46.485-14.106 104.275-7.273 143.787 17.007 4.692 2.89 6.175 9.034 3.286 13.72v-.001Zm1.345-36.293C162.457 88.964 94.394 86.71 55.007 98.666c-6.325 1.918-13.014-1.653-14.93-7.978-1.917-6.328 1.65-13.012 7.98-14.935C93.27 62.027 168.434 64.68 215.929 92.876c5.702 3.376 7.566 10.724 4.188 16.405-3.362 5.69-10.73 7.565-16.4 4.187h-.006Z" fill="#1ED760"/></svg>
+            </span>
+            <span class="stream-name">Spotify</span>
+          </a>
+        </li>
+        <li style="--i:1">
+          <a class="stream-link" href="https://music.apple.com/np/artist/nihan/1744221632" target="_blank" rel="noopener" aria-label="Listen on Apple Music">
+            <span class="stream-icon">
+              <svg viewBox="0 0 361 361" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><linearGradient id="applemusic-grad" x1="180" x2="180" y1="358.605" y2="7.759" gradientUnits="userSpaceOnUse"><stop offset="0" style="stop-color:#fa233b"/><stop offset="1" style="stop-color:#fb5c74"/></linearGradient><path d="M360 112.61c0-4.3 0-8.6-.02-12.9-.02-3.62-.06-7.24-.16-10.86-.21-7.89-.68-15.84-2.08-23.64-1.42-7.92-3.75-15.29-7.41-22.49a75.633 75.633 0 0 0-33.06-33.05c-7.19-3.66-14.56-5.98-22.47-7.41C287 .86 279.04.39 271.15.18c-3.62-.1-7.24-.14-10.86-.16-4.3-.02-8.6-.02-12.9-.02H112.61c-4.3 0-8.6 0-12.9.02-3.62.02-7.24.06-10.86.16C80.96.4 73 .86 65.2 2.27c-7.92 1.42-15.28 3.75-22.47 7.41A75.633 75.633 0 0 0 9.67 42.73c-3.66 7.2-5.99 14.57-7.41 22.49C.86 73.02.39 80.98.18 88.86.08 92.48.04 96.1.02 99.72 0 104.01 0 108.31 0 112.61v134.77c0 4.3 0 8.6.02 12.9.02 3.62.06 7.24.16 10.86.21 7.89.68 15.84 2.08 23.64 1.42 7.92 3.75 15.29 7.41 22.49a75.633 75.633 0 0 0 33.06 33.05c7.19 3.66 14.56 5.98 22.47 7.41 7.8 1.4 15.76 1.87 23.65 2.08 3.62.1 7.24.14 10.86.16 4.3.03 8.6.02 12.9.02h134.77c4.3 0 8.6 0 12.9-.02 3.62-.02 7.24-.06 10.86-.16 7.89-.21 15.85-.68 23.65-2.08 7.92-1.42 15.28-3.75 22.47-7.41a75.633 75.633 0 0 0 33.06-33.05c3.66-7.2 5.99-14.57 7.41-22.49 1.4-7.8 1.87-15.76 2.08-23.64.1-3.62.14-7.24.16-10.86.03-4.3.02-8.6.02-12.9V112.61z" style="fill-rule:evenodd;clip-rule:evenodd;fill:url(#applemusic-grad)"/><path d="M254.5 55c-.87.08-8.6 1.45-9.53 1.64l-107 21.59-.04.01c-2.79.59-4.98 1.58-6.67 3-2.04 1.71-3.17 4.13-3.6 6.95-.09.6-.24 1.82-.24 3.62v133.92c0 3.13-.25 6.17-2.37 8.76s-4.74 3.37-7.81 3.99l-6.99 1.41c-8.84 1.78-14.59 2.99-19.8 5.01-4.98 1.93-8.71 4.39-11.68 7.51-5.89 6.17-8.28 14.54-7.46 22.38.7 6.69 3.71 13.09 8.88 17.82 3.49 3.2 7.85 5.63 12.99 6.66 5.33 1.07 11.01.7 19.31-.98 4.42-.89 8.56-2.28 12.5-4.61 3.9-2.3 7.24-5.37 9.85-9.11 2.62-3.75 4.31-7.92 5.24-12.35.96-4.57 1.19-8.7 1.19-13.26V142.81c0-6.22 1.76-7.86 6.78-9.08 0 0 88.94-17.94 93.09-18.75 5.79-1.11 8.52.54 8.52 6.61v79.29c0 3.14-.03 6.32-2.17 8.92-2.12 2.59-4.74 3.37-7.81 3.99l-6.99 1.41c-8.84 1.78-14.59 2.99-19.8 5.01-4.98 1.93-8.71 4.39-11.68 7.51-5.89 6.17-8.49 14.54-7.67 22.38.7 6.69 3.92 13.09 9.09 17.82 3.49 3.2 7.85 5.56 12.99 6.6 5.33 1.07 11.01.69 19.31-.98 4.42-.89 8.56-2.22 12.5-4.55 3.9-2.3 7.24-5.37 9.85-9.11 2.62-3.75 4.31-7.92 5.24-12.35.96-4.57 1-8.7 1-13.26V64.46c.02-6.16-3.23-9.96-9.02-9.46z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"/></svg>
+            </span>
+            <span class="stream-name">Apple Music</span>
+          </a>
+        </li>
+        <li style="--i:2">
+          <a class="stream-link" href="https://youtube.com/@dj-nihan?si=QHFVa0ZB_EpJ6BZL" target="_blank" rel="noopener" aria-label="Watch on YouTube">
+            <span class="stream-icon">
+              <svg viewBox="0 0 256 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" aria-hidden="true" focusable="false"><path fill="red" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"/><path fill="#FFF" d="m102.421 128.06 66.328-38.418-66.328-38.418z"/></svg>
+            </span>
+            <span class="stream-name">YouTube</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Live set video — click-to-play with sound (no autoplay, not muted) -->
+      <figure class="live-set">
+        <figcaption class="live-set-label">Live Set</figcaption>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/MQbQE2x7Cs0?rel=0&modestbranding=1&playsinline=1"
+            title="DJ Nihan — Live Set"
+            loading="lazy"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+
+    <!-- ============ EVENT'S GLIMPSE / GALLERY ============ -->
+    <section id="gallery" class="section reveal" aria-labelledby="gal-h">
+      <p class="section-index">05</p>
+      <h2 id="gal-h" class="section-title">Event&rsquo;s Glimpse</h2>
+      <p class="section-lead">Moments from the floor &mdash; live, loud and packed.</p>
+
+      <h3 class="gallery-subhead">Portraits &amp; Performance</h3>
+      <div class="gallery-grid stagger">
+        <figure class="media gallery-item" style="--i:0" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan studio portrait, orange shades and leather jacket">
+            <img src="images/photos/photo-02.jpg" alt="DJ Nihan studio portrait, orange shades and leather jacket" loading="lazy" width="1050" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:1" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan seated studio portrait under red light">
+            <img src="images/photos/photo-03.jpg" alt="DJ Nihan seated studio portrait under red light" loading="lazy" width="1070" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:2" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan full-length studio portrait in all black">
+            <img src="images/photos/photo-04.jpg" alt="DJ Nihan full-length studio portrait in all black" loading="lazy" width="1008" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:3" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan crouched on stage amid lasers, holding a mic">
+            <img src="images/photos/photo-05.jpg" alt="DJ Nihan crouched on stage amid lasers, holding a mic" loading="lazy" width="1280" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:4" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan on the booth with a mic, crowd behind">
+            <img src="images/photos/photo-06.jpg" alt="DJ Nihan on the DJ booth with a mic, crowd behind" loading="lazy" width="1080" height="1323" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:5" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan at the decks against a teal equaliser wall">
+            <img src="images/photos/photo-07.jpg" alt="DJ Nihan at the decks against a teal equaliser wall" loading="lazy" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:6" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan at the decks in a white shirt under red light">
+            <img src="images/photos/photo-08.jpg" alt="DJ Nihan at the decks in a white shirt under red light" loading="lazy" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item" style="--i:7" data-label="Photo">
+          <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan at the decks in an orange top at Club Turtle">
+            <img src="images/photos/photo-09.jpg" alt="DJ Nihan at the decks in an orange top at Club Turtle" loading="lazy" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+      </div>
+
+      <h3 class="gallery-subhead">On the bill</h3>
+      <div class="gallery-grid gallery-grid--flyers stagger">
+        <figure class="media gallery-item gallery-item--flyer" style="--i:0" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: DJ Nihan shows details, January–February dates">
+            <img src="images/flyers/flyer-01.jpg" alt="Event flyer: DJ Nihan shows details, January–February dates" loading="lazy" width="1258" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:1" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: The Last Friday at Garrison Pub, Thamel">
+            <img src="images/flyers/flyer-02.jpg" alt="Event flyer: The Last Friday at Garrison Pub, Thamel" loading="lazy" width="1222" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:2" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Weekend Gig presented by Cuemix">
+            <img src="images/flyers/flyer-03.jpg" alt="Event flyer: Weekend Gig presented by Cuemix" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:3" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Guest DJ at Ibiza Pool Party, Phi Phi Island">
+            <img src="images/flyers/flyer-04.jpg" alt="Event flyer: Guest DJ at Ibiza Pool Party, Phi Phi Island" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:4" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Rang Over 2K25 Holi at The Everest Hotel">
+            <img src="images/flyers/flyer-05.jpg" alt="Event flyer: Rang Over 2K25 Holi at The Everest Hotel" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:5" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Holi Weekend 2025 tour, Cuemix DJ School">
+            <img src="images/flyers/flyer-06.jpg" alt="Event flyer: Holi Weekend 2025 tour, Cuemix DJ School" loading="lazy" width="1080" height="1184" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:6" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Road to Nepal Street Fashion Weekend, Club Platinum">
+            <img src="images/flyers/flyer-07.jpg" alt="Event flyer: Road to Nepal Street Fashion Weekend at Club Platinum" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:7" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Friday Northeast Nightout, Kolkata">
+            <img src="images/flyers/flyer-08.jpg" alt="Event flyer: Friday Northeast Nightout, Kolkata" loading="lazy" width="1280" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:8" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Events for this Shrawan schedule">
+            <img src="images/flyers/flyer-09.jpg" alt="Event flyer: Events for this Shrawan schedule" loading="lazy" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:9" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Signature Saturday at Cyclone Club">
+            <img src="images/flyers/flyer-10.jpg" alt="Event flyer: Signature Saturday at Cyclone Club" loading="lazy" width="1080" height="1351" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:10" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: DJ Nihan, Main Act at Club Catwalk, Pokhara">
+            <img src="images/flyers/flyer-11.jpg" alt="Event flyer: DJ Nihan, Main Act at Club Catwalk, Pokhara" loading="lazy" width="804" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:11" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: DJ Nihan shows details, alternate art">
+            <img src="images/flyers/flyer-12.jpg" alt="Event flyer: DJ Nihan shows details, alternate artwork" loading="lazy" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:12" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Techno Beats Night at Raksi Music Bar, Marriott">
+            <img src="images/flyers/flyer-13.jpg" alt="Event flyer: Techno Beats Night at Raksi Music Bar, Marriott" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:13" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Hilton Kathmandu Pool Party featuring DJ Nihan">
+            <img src="images/flyers/flyer-14.jpg" alt="Event flyer: Hilton Kathmandu Pool Party featuring DJ Nihan" loading="lazy" width="1270" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:14" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Next Big DJ, Cuemix DJ School enrollment">
+            <img src="images/flyers/flyer-15.jpg" alt="Event flyer: Next Big DJ, Cuemix DJ School enrollment" loading="lazy" width="1600" height="1600" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+        <figure class="media gallery-item gallery-item--flyer" style="--i:15" data-label="Flyer">
+          <button type="button" class="tile-btn" aria-label="Enlarge flyer: Jameson Connects after party with DJ Nihan at Club Nova">
+            <img src="images/flyers/flyer-16.jpg" alt="Event flyer: Jameson Connects after party with DJ Nihan at Club Nova" loading="lazy" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
+          </button>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PRESS ASSETS / DOWNLOADS ============ -->
+    <section id="press-assets" class="section reveal" aria-labelledby="assets-h">
+      <p class="section-index">06</p>
+      <h2 id="assets-h" class="section-title">Press <span class="accent">Assets</span></h2>
+      <p class="section-lead">For promoters &amp; event pages &mdash; download Nihan&rsquo;s official assets to build flyers and promo. Free for promotional use; please don&rsquo;t alter or recolour the logo.</p>
+      <ul class="assets-list stagger">
+        <li style="--i:0">
+          <a class="asset-card" href="images/photos/nihan-hero-cutout.png" download="DJ-Nihan-portrait.png"
+             aria-label="Download DJ Nihan portrait, transparent PNG, 1200 by 1500 pixels">
+            <span class="asset-thumb asset-thumb--portrait">
+              <img src="images/photos/nihan-hero-cutout.png" alt="" loading="lazy" width="1200" height="1500" />
+            </span>
+            <span class="asset-meta">
+              <span class="asset-name">Portrait <span class="asset-kind">PNG</span></span>
+              <span class="asset-desc">Transparent cut-out &middot; 1200&times;1500</span>
+              <span class="asset-dl">Download
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v10m0 0 4-4m-4 4-4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </span>
+          </a>
+        </li>
+        <li style="--i:1">
+          <a class="asset-card" href="images/nihan-logo.png" download="NIHAN-logo.png"
+             aria-label="Download official NIHAN wordmark logo, transparent PNG, 1998 by 1099 pixels">
+            <span class="asset-thumb asset-thumb--logo">
+              <img src="images/nihan-logo.png" alt="" loading="lazy" width="1998" height="1099" />
+            </span>
+            <span class="asset-meta">
+              <span class="asset-name">Logo <span class="asset-kind">PNG</span></span>
+              <span class="asset-desc">Transparent wordmark &middot; 1998&times;1099</span>
+              <span class="asset-dl">Download
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v10m0 0 4-4m-4 4-4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ BOOKING / CONTACT ============ -->
+    <section id="contact" class="section reveal contact" aria-labelledby="contact-h">
+      <p class="section-index">07</p>
+      <h2 id="contact-h" class="section-title">Booking Contacts</h2>
+      <p class="section-lead">For bookings, press and collaborations &mdash; reach out directly.</p>
+      <ul class="contact-list">
+        <li>
+          <a class="contact-card" href="mailto:nihanbhatta04@gmail.com">
+            <span class="contact-kind">Email</span>
+            <span class="contact-value">nihanbhatta04@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="https://wa.me/9779800592757" target="_blank" rel="noopener">
+            <span class="contact-kind">Phone / WhatsApp</span>
+            <span class="contact-value">+977 980&#8209;0592757</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="tel:+9779800592757">
+            <span class="contact-kind">Call</span>
+            <span class="contact-value">+977 980&#8209;0592757</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="https://instagram.com/nihan_music1" target="_blank" rel="noopener">
+            <span class="contact-kind">Instagram</span>
+            <span class="contact-value">@nihan_music1</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="https://tiktok.com/@nihanmusic" target="_blank" rel="noopener">
+            <span class="contact-kind">TikTok</span>
+            <span class="contact-value">@nihanmusic</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-card" href="https://www.facebook.com/search/top?q=Nihan%20Bhatta" target="_blank" rel="noopener" aria-label="Find Nihan Bhatta on Facebook">
+            <span class="contact-kind">Facebook</span>
+            <span class="contact-value">Nihan Bhatta</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-mark"><img class="footer-logo" src="images/nihan-logo.png" alt="" aria-hidden="true" width="1998" height="1099" /></p>
+    <p class="footer-note">DJ Nihan &middot; Press Kit &middot; &copy; <span id="year">2026</span></p>
+  </footer>
+
+  <!-- Lightbox (click-to-enlarge); hidden until opened by JS -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close image viewer">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

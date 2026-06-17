@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(set -e)",
+      "Bash(mkdir -p __TRACKED_VAR__/photos __TRACKED_VAR__/flyers __TRACKED_VAR__/press)",
+      "Bash(cp '__TRACKED_VAR__/WhatsApp Image 2026-06-16 at 17.16.40.jpeg' __TRACKED_VAR__/photos/photo-01.jpg)",
+      "Bash(cp '__TRACKED_VAR__/WhatsApp Image 2026-06-16 at 17.16.35.jpeg' __TRACKED_VAR__/photos/photo-02.jpg)",
+      "Bash(cp '__TRACKED_VAR__/WhatsApp Image 2026-06-16 at 17.16.36.jpeg' __TRACKED_VAR__/photos/photo-03.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha Nihan.PNG)",
+      "Bash(command -v magick convert pngcrush optipng)",
+      "Bash(python3 -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Bash(python3 -)",
+      "Bash(sips -g pixelWidth -g pixelHeight images/nihan-logo.png)",
+      "mcp__magic__logo_search",
+      "Read(//Applications/Google Chrome.app/**)",
+      "Bash(command -v chromium chromium-browser google-chrome)",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(sips -g pixelWidth -g pixelHeight -g hasAlpha Untitled-1.png)",
+      "Read(//Users/apple/.claude/skills/**)",
+      "Read(//Users/apple/.claude/plugins/**)",
+      "Read(//Users/apple/.claude/**)",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(python3 -m http.server 8765)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8765/index.html)",
+      "Bash(node --check script.js)",
+      "Bash(awk '{print $5,$9}')"
+    ]
+  }
+}
