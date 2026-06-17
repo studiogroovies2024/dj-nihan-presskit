@@ -15,11 +15,21 @@
   <title>DJ NIHAN — Press Kit</title>
   <meta name="description" content="Official press kit for DJ Nihan — open-format DJ from Nepal. Hardstyle, Techno, Tech House, Bollywood remixes. Bookings, streaming and live highlights." />
 
-  <!-- Open Graph (link-preview image; currently the hero portrait) -->
+  <!-- Open Graph (link-preview image: NIHAN logo on black, 1200x630) -->
   <meta property="og:title" content="DJ NIHAN — Press Kit" />
   <meta property="og:description" content="Open-format DJ from Nepal. Hardstyle · Techno · Tech House · Bollywood remixes." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/photos/photo-01.jpg" />
+  <meta property="og:url" content="https://nihanmusic.vercel.app/" />
+  <meta property="og:image" content="https://nihanmusic.vercel.app/images/og-share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="DJ NIHAN logo" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DJ NIHAN — Press Kit" />
+  <meta name="twitter:description" content="Open-format DJ from Nepal. Hardstyle · Techno · Tech House · Bollywood remixes." />
+  <meta name="twitter:image" content="https://nihanmusic.vercel.app/images/og-share.jpg" />
 
   <!-- Fonts: Anton (wordmark), Rajdhani (headings), Barlow Condensed (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,7 +42,7 @@
   <!-- Themed preloader: covers the viewport on load, fades out on window 'load' (JS) -->
   <div class="preloader" id="preloader" aria-hidden="true">
     <div class="preloader-inner">
-      <img class="preloader-logo" src="images/nihan-logo.png" alt="" width="1998" height="1099" />
+      <img class="preloader-logo" src="images/nihan-logo.png" alt="" fetchpriority="high" decoding="async" width="1998" height="1099" />
       <div class="preloader-bar"><span></span></div>
     </div>
   </div>
@@ -45,7 +55,7 @@
   <!-- Fixed nav -->
   <header class="site-nav" id="top">
     <a class="nav-brand" href="#top" aria-label="DJ Nihan — back to top">
-      <img class="nav-logo" src="images/nihan-logo.png" alt="" width="1998" height="1099" />
+      <img class="nav-logo" src="images/nihan-logo.png" alt="" decoding="async" width="1998" height="1099" />
     </a>
     <nav aria-label="Primary">
       <ul class="nav-list">
@@ -65,7 +75,7 @@
     <section class="hero" aria-labelledby="hero-wordmark">
       <!-- Far background: same portrait, heavily blurred + darkened for depth only -->
       <div class="hero-bg" aria-hidden="true">
-        <img src="images/photos/photo-01.jpg" alt="" width="1066" height="1600" loading="eager" />
+        <img src="images/photos/photo-01.jpg" alt="" width="1066" height="1600" loading="eager" fetchpriority="high" decoding="async" />
       </div>
 
       <!-- Decorative red glass shards (animated / cursor-reactive) -->
@@ -83,7 +93,7 @@
           <p class="eyebrow">Press Kit &middot; Open Format DJ &middot; Nepal</p>
           <!-- Official NIHAN wordmark logo, glitch-reveal on load -->
           <h1 id="hero-wordmark" class="wordmark-logo">
-            <img class="logo-img" src="images/nihan-logo.png" alt="NIHAN" width="1998" height="1099" />
+            <img class="logo-img" src="images/nihan-logo.png" alt="NIHAN" fetchpriority="high" decoding="async" width="1998" height="1099" />
           </h1>
           <p class="hero-sub">Hardstyle &middot; Techno &middot; Tech House &middot; Bollywood Remixes</p>
           <div class="hero-actions">
@@ -94,7 +104,7 @@
 
         <!-- Floating cutout: offset to the right, breathing, with a pulsing red aura behind -->
         <figure class="hero-cutout" aria-hidden="true">
-          <img src="images/photos/nihan-hero-cutout.png" alt="" width="1200" height="1500" loading="eager"
+          <img src="images/photos/nihan-hero-cutout.png" alt="" width="1200" height="1500" loading="eager" fetchpriority="high" decoding="async"
                onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='images/photos/photo-01.jpg';}" />
         </figure>
       </div>
@@ -193,7 +203,7 @@
           <iframe
             src="https://www.youtube-nocookie.com/embed/MQbQE2x7Cs0?rel=0&modestbranding=1&playsinline=1"
             title="DJ Nihan — Live Set"
-            loading="lazy"
+            loading="lazy" decoding="async"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -212,42 +222,42 @@
       <div class="gallery-grid stagger">
         <figure class="media gallery-item" style="--i:0" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan studio portrait, orange shades and leather jacket">
-            <img src="images/photos/photo-02.jpg" alt="DJ Nihan studio portrait, orange shades and leather jacket" loading="lazy" width="1050" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-02.jpg" alt="DJ Nihan studio portrait, orange shades and leather jacket" loading="lazy" decoding="async" width="1050" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:1" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan seated studio portrait under red light">
-            <img src="images/photos/photo-03.jpg" alt="DJ Nihan seated studio portrait under red light" loading="lazy" width="1070" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-03.jpg" alt="DJ Nihan seated studio portrait under red light" loading="lazy" decoding="async" width="1070" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:2" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan full-length studio portrait in all black">
-            <img src="images/photos/photo-04.jpg" alt="DJ Nihan full-length studio portrait in all black" loading="lazy" width="1008" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-04.jpg" alt="DJ Nihan full-length studio portrait in all black" loading="lazy" decoding="async" width="1008" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:3" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan crouched on stage amid lasers, holding a mic">
-            <img src="images/photos/photo-05.jpg" alt="DJ Nihan crouched on stage amid lasers, holding a mic" loading="lazy" width="1280" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-05.jpg" alt="DJ Nihan crouched on stage amid lasers, holding a mic" loading="lazy" decoding="async" width="1280" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:4" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan on the booth with a mic, crowd behind">
-            <img src="images/photos/photo-06.jpg" alt="DJ Nihan on the DJ booth with a mic, crowd behind" loading="lazy" width="1080" height="1323" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-06.jpg" alt="DJ Nihan on the DJ booth with a mic, crowd behind" loading="lazy" decoding="async" width="1080" height="1323" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:5" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan at the decks against a teal equaliser wall">
-            <img src="images/photos/photo-07.jpg" alt="DJ Nihan at the decks against a teal equaliser wall" loading="lazy" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-07.jpg" alt="DJ Nihan at the decks against a teal equaliser wall" loading="lazy" decoding="async" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:6" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan at the decks in a white shirt under red light">
-            <img src="images/photos/photo-08.jpg" alt="DJ Nihan at the decks in a white shirt under red light" loading="lazy" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-08.jpg" alt="DJ Nihan at the decks in a white shirt under red light" loading="lazy" decoding="async" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item" style="--i:7" data-label="Photo">
           <button type="button" class="tile-btn" aria-label="Enlarge: DJ Nihan at the decks in an orange top at Club Turtle">
-            <img src="images/photos/photo-09.jpg" alt="DJ Nihan at the decks in an orange top at Club Turtle" loading="lazy" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/photos/photo-09.jpg" alt="DJ Nihan at the decks in an orange top at Club Turtle" loading="lazy" decoding="async" width="1066" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
       </div>
@@ -256,82 +266,82 @@
       <div class="gallery-grid gallery-grid--flyers stagger">
         <figure class="media gallery-item gallery-item--flyer" style="--i:0" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: DJ Nihan shows details, January–February dates">
-            <img src="images/flyers/flyer-01.jpg" alt="Event flyer: DJ Nihan shows details, January–February dates" loading="lazy" width="1258" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-01.jpg" alt="Event flyer: DJ Nihan shows details, January–February dates" loading="lazy" decoding="async" width="1258" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:1" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: The Last Friday at Garrison Pub, Thamel">
-            <img src="images/flyers/flyer-02.jpg" alt="Event flyer: The Last Friday at Garrison Pub, Thamel" loading="lazy" width="1222" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-02.jpg" alt="Event flyer: The Last Friday at Garrison Pub, Thamel" loading="lazy" decoding="async" width="1222" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:2" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Weekend Gig presented by Cuemix">
-            <img src="images/flyers/flyer-03.jpg" alt="Event flyer: Weekend Gig presented by Cuemix" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-03.jpg" alt="Event flyer: Weekend Gig presented by Cuemix" loading="lazy" decoding="async" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:3" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Guest DJ at Ibiza Pool Party, Phi Phi Island">
-            <img src="images/flyers/flyer-04.jpg" alt="Event flyer: Guest DJ at Ibiza Pool Party, Phi Phi Island" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-04.jpg" alt="Event flyer: Guest DJ at Ibiza Pool Party, Phi Phi Island" loading="lazy" decoding="async" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:4" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Rang Over 2K25 Holi at The Everest Hotel">
-            <img src="images/flyers/flyer-05.jpg" alt="Event flyer: Rang Over 2K25 Holi at The Everest Hotel" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-05.jpg" alt="Event flyer: Rang Over 2K25 Holi at The Everest Hotel" loading="lazy" decoding="async" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:5" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Holi Weekend 2025 tour, Cuemix DJ School">
-            <img src="images/flyers/flyer-06.jpg" alt="Event flyer: Holi Weekend 2025 tour, Cuemix DJ School" loading="lazy" width="1080" height="1184" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-06.jpg" alt="Event flyer: Holi Weekend 2025 tour, Cuemix DJ School" loading="lazy" decoding="async" width="1080" height="1184" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:6" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Road to Nepal Street Fashion Weekend, Club Platinum">
-            <img src="images/flyers/flyer-07.jpg" alt="Event flyer: Road to Nepal Street Fashion Weekend at Club Platinum" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-07.jpg" alt="Event flyer: Road to Nepal Street Fashion Weekend at Club Platinum" loading="lazy" decoding="async" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:7" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Friday Northeast Nightout, Kolkata">
-            <img src="images/flyers/flyer-08.jpg" alt="Event flyer: Friday Northeast Nightout, Kolkata" loading="lazy" width="1280" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-08.jpg" alt="Event flyer: Friday Northeast Nightout, Kolkata" loading="lazy" decoding="async" width="1280" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:8" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Events for this Shrawan schedule">
-            <img src="images/flyers/flyer-09.jpg" alt="Event flyer: Events for this Shrawan schedule" loading="lazy" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-09.jpg" alt="Event flyer: Events for this Shrawan schedule" loading="lazy" decoding="async" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:9" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Signature Saturday at Cyclone Club">
-            <img src="images/flyers/flyer-10.jpg" alt="Event flyer: Signature Saturday at Cyclone Club" loading="lazy" width="1080" height="1351" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-10.jpg" alt="Event flyer: Signature Saturday at Cyclone Club" loading="lazy" decoding="async" width="1080" height="1351" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:10" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: DJ Nihan, Main Act at Club Catwalk, Pokhara">
-            <img src="images/flyers/flyer-11.jpg" alt="Event flyer: DJ Nihan, Main Act at Club Catwalk, Pokhara" loading="lazy" width="804" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-11.jpg" alt="Event flyer: DJ Nihan, Main Act at Club Catwalk, Pokhara" loading="lazy" decoding="async" width="804" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:11" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: DJ Nihan shows details, alternate art">
-            <img src="images/flyers/flyer-12.jpg" alt="Event flyer: DJ Nihan shows details, alternate artwork" loading="lazy" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-12.jpg" alt="Event flyer: DJ Nihan shows details, alternate artwork" loading="lazy" decoding="async" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:12" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Techno Beats Night at Raksi Music Bar, Marriott">
-            <img src="images/flyers/flyer-13.jpg" alt="Event flyer: Techno Beats Night at Raksi Music Bar, Marriott" loading="lazy" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-13.jpg" alt="Event flyer: Techno Beats Night at Raksi Music Bar, Marriott" loading="lazy" decoding="async" width="1080" height="1080" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:13" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Hilton Kathmandu Pool Party featuring DJ Nihan">
-            <img src="images/flyers/flyer-14.jpg" alt="Event flyer: Hilton Kathmandu Pool Party featuring DJ Nihan" loading="lazy" width="1270" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-14.jpg" alt="Event flyer: Hilton Kathmandu Pool Party featuring DJ Nihan" loading="lazy" decoding="async" width="1270" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:14" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Next Big DJ, Cuemix DJ School enrollment">
-            <img src="images/flyers/flyer-15.jpg" alt="Event flyer: Next Big DJ, Cuemix DJ School enrollment" loading="lazy" width="1600" height="1600" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-15.jpg" alt="Event flyer: Next Big DJ, Cuemix DJ School enrollment" loading="lazy" decoding="async" width="1600" height="1600" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
         <figure class="media gallery-item gallery-item--flyer" style="--i:15" data-label="Flyer">
           <button type="button" class="tile-btn" aria-label="Enlarge flyer: Jameson Connects after party with DJ Nihan at Club Nova">
-            <img src="images/flyers/flyer-16.jpg" alt="Event flyer: Jameson Connects after party with DJ Nihan at Club Nova" loading="lazy" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
+            <img src="images/flyers/flyer-16.jpg" alt="Event flyer: Jameson Connects after party with DJ Nihan at Club Nova" loading="lazy" decoding="async" width="1080" height="1350" onerror="this.classList.add('img-failed')" />
           </button>
         </figure>
       </div>
@@ -347,7 +357,7 @@
           <a class="asset-card" href="images/photos/nihan-hero-cutout.png" download="DJ-Nihan-portrait.png"
              aria-label="Download DJ Nihan portrait, transparent PNG, 1200 by 1500 pixels">
             <span class="asset-thumb asset-thumb--portrait">
-              <img src="images/photos/nihan-hero-cutout.png" alt="" loading="lazy" width="1200" height="1500" />
+              <img src="images/photos/nihan-hero-cutout.png" alt="" loading="lazy" decoding="async" width="1200" height="1500" />
             </span>
             <span class="asset-meta">
               <span class="asset-name">Portrait <span class="asset-kind">PNG</span></span>
@@ -362,7 +372,7 @@
           <a class="asset-card" href="images/nihan-logo.png" download="NIHAN-logo.png"
              aria-label="Download official NIHAN wordmark logo, transparent PNG, 1998 by 1099 pixels">
             <span class="asset-thumb asset-thumb--logo">
-              <img src="images/nihan-logo.png" alt="" loading="lazy" width="1998" height="1099" />
+              <img src="images/nihan-logo.png" alt="" loading="lazy" decoding="async" width="1998" height="1099" />
             </span>
             <span class="asset-meta">
               <span class="asset-name">Logo <span class="asset-kind">PNG</span></span>
@@ -423,7 +433,7 @@
   </main>
 
   <footer class="site-footer">
-    <p class="footer-mark"><img class="footer-logo" src="images/nihan-logo.png" alt="" aria-hidden="true" width="1998" height="1099" /></p>
+    <p class="footer-mark"><img class="footer-logo" src="images/nihan-logo.png" alt="" aria-hidden="true" decoding="async" loading="lazy" width="1998" height="1099" /></p>
     <p class="footer-note">DJ Nihan &middot; Press Kit &middot; &copy; <span id="year">2026</span></p>
   </footer>
 
