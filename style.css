@@ -967,9 +967,60 @@ strong.hl { font-weight: 700; }
 }
 .buy-urgent a:hover { color: var(--white); border-color: var(--white); }
 
+/* ---- Mobile / narrow: single column with an explicit reading order ---- */
 @media (max-width: 760px) {
-  .tracks-grid { grid-template-columns: 1fr; }
-  .qr-col { max-width: 400px; }
+  .tracks-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.6rem;
+  }
+  /* flatten both column wrappers so their children stack in one column */
+  .qr-col,
+  .tracks-info { display: contents; }
+
+  /* order: price → description → QR → callout → steps → button → urgent line */
+  .bundle-stats { order: 1; }
+  .price-desc   { order: 2; }
+  .qr-card      { order: 3; }
+  .pay-callout  { order: 4; }
+  .buy-steps    { order: 5; }
+  .tracks-cta   { order: 6; }
+  .buy-urgent   { order: 7; }
+
+  /* spacing comes from the flex gap — clear per-block margins so it stays even */
+  .bundle-stats,
+  .price-desc,
+  .buy-steps,
+  .buy-urgent { margin: 0; }
+
+  /* price (NPR 10,000) and the 145 stat stack instead of crowding side by side */
+  .bundle-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* callout sits full-width with no stray growth/clipping; border + glow intact */
+  .pay-callout { flex: 0 0 auto; width: 100%; }
+
+  /* keep the primary CTA at its natural width rather than stretched edge-to-edge,
+     and keep its long label on a single line */
+  .tracks-cta { align-self: flex-start; white-space: nowrap; }
+
+  /* keep the WhatsApp link as one unbroken unit so it never wraps mid-link */
+  .buy-urgent a { white-space: nowrap; }
+}
+
+/* ---- Small phones: shrink the long button label / urgent line to fit one line ---- */
+@media (max-width: 480px) {
+  .tracks-cta {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+  .buy-urgent { font-size: 0.82rem; }
 }
 
 /* ===================== GALLERY ===================== */
