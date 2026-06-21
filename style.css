@@ -658,9 +658,9 @@ strong.hl { font-weight: 700; }
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 4vw, 2.5rem);
-  max-width: 760px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  max-width: 960px;
 }
 .flag-card {
   position: relative;
@@ -725,8 +725,11 @@ strong.hl { font-weight: 700; }
   color: var(--white);
 }
 
+/* 2x2 grid on tablet/mobile */
+@media (max-width: 620px) {
+  .flags-row { grid-template-columns: repeat(2, 1fr); max-width: 420px; gap: 1rem; }
+}
 @media (max-width: 480px) {
-  .flags-row { gap: 0.75rem; }
   .flag-card { padding: 1rem 0.5rem; gap: 0.7rem; }
 }
 
@@ -771,6 +774,14 @@ strong.hl { font-weight: 700; }
   align-items: start;
 }
 
+/* QR column: QR card on top, callout fills the gap below to balance the steps column */
+.qr-col {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+}
+
 /* QR card */
 .qr-card {
   margin: 0;
@@ -782,6 +793,41 @@ strong.hl { font-weight: 700; }
   border: 1px solid var(--line);
   border-left: 3px solid var(--red);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5), 0 0 26px rgba(225, 6, 0, 0.22);
+}
+
+/* Highlighted "after paying" callout under the QR */
+.pay-callout {
+  flex: 1 1 auto;            /* grow to fill the empty space beneath the QR */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.4rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--red);
+  box-shadow: 0 0 26px rgba(225, 6, 0, 0.18);
+}
+.callout-head {
+  margin: 0;
+  font-family: var(--f-head);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--red-text);
+}
+.callout-text {
+  margin: 0;
+  font-family: var(--f-body);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.callout-btn {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.4rem;
 }
 .qr-label {
   font-family: var(--f-head);
@@ -803,11 +849,45 @@ strong.hl { font-weight: 700; }
 .qr-frame img { width: 100%; height: auto; display: block; }
 
 /* Price tag */
+/* Bundle stats row: price + the 145 count sit together, bottom-aligned */
+.bundle-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: clamp(1.5rem, 6vw, 3.5rem);
+  margin: 0 0 0.9rem;
+}
 .price-tag {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  margin: 0 0 1.75rem;
+  margin: 0;
+}
+.count-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+.count-num {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 8vw, 3.8rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--red-text);
+  transform: skewX(-7deg);
+  filter: drop-shadow(0 0 18px rgba(225, 6, 0, 0.45));
+}
+.count-label {
+  font-family: var(--f-head);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  color: var(--text-dim);
+  max-width: 11ch;
 }
 .price-kind {
   font-family: var(--f-head);
@@ -832,7 +912,7 @@ strong.hl { font-weight: 700; }
   letter-spacing: 0.04em;
   color: var(--text-dim);
   font-size: 0.9rem;
-  margin-top: 0.35rem;
+  margin: 0 0 1.75rem;
 }
 
 /* Numbered buy steps */
@@ -847,13 +927,11 @@ strong.hl { font-weight: 700; }
 .buy-steps li {
   position: relative;
   counter-increment: step;
-  padding: 0 0 0 3rem;
-  min-height: 2rem;
-  display: flex;
-  align-items: center;
+  padding: 0.12rem 0 0 3.1rem;
+  min-height: 2.1rem;
   font-family: var(--f-body);
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .buy-steps li::before {
   content: counter(step);
@@ -891,7 +969,7 @@ strong.hl { font-weight: 700; }
 
 @media (max-width: 760px) {
   .tracks-grid { grid-template-columns: 1fr; }
-  .qr-card { max-width: 360px; }
+  .qr-col { max-width: 400px; }
 }
 
 /* ===================== GALLERY ===================== */
