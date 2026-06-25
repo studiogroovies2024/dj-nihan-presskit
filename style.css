@@ -1428,6 +1428,36 @@ strong.hl { font-weight: 700; }
   font-size: 0.85rem;
   margin: 0;
 }
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  padding: 0.35rem 0.2rem;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.25s var(--ease);
+}
+.footer-credit-logo {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+.footer-credit-text {
+  font-family: var(--f-head);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+}
+.footer-credit:hover,
+.footer-credit:focus-visible {
+  opacity: 1;
+}
+.footer-credit:hover .footer-credit-text,
+.footer-credit:focus-visible .footer-credit-text {
+  color: var(--text);
+}
 
 /* ===================== SCROLL REVEAL ===================== */
 /* Base state is VISIBLE — hidden states only apply when JS is active (.js on <html>),
